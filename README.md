@@ -17,5 +17,11 @@
 |03. |CSS         |Look & Feel - Cascading & Style sheet |
 |04. |Javascript  |Behavior - Programing Language        |
 
+
+![profile](/src/profile.webp)
+** JUAN PABLO BECERRA SAAVEDRA ***
+
 [ADSO FILES DRIVE](https://tinyurl/wnkk334u)
+
+
 [VERCEL URL](https://vercel.app)
