@@ -1,27 +1,24 @@
 # ADSO-3390374
+## Análisis y Desarrollo de Software
+
+### Centro de Procesos Industriales
+**Regional Caldas**
+
+---
 
 
-## Analisis y desarrollo de software 
+| ID | THEME | DESCRIPTION |
+| :--- | :--- | :--- |
+| 01 | **EMMET** | Workflow - Markup & styling |
+| 02 | **HTML** | Structure - Hypertext |
+| 03 | **CSS** | Look & Feel - Cascading Style Sheets |
+| 04 | **JavaScript** | Behavior - Programming Language |
 
+---
 
-### Centro de procesos industriales ### 
+![profile](./src/profile.webp)
 
-*** Regional Caldas ***
+**JUAN PABLO BECERRA SAAVEDRA**
 
---- 
-
-|ID. | THEME      | DESCRIPTION                          | 
-|--- |---         |---                                   |
-|01. |EMMET       |Workflow - Markup & styling           |
-|02. |HTML        |Structure - Hypertext                 |
-|03. |CSS         |Look & Feel - Cascading & Style sheet |
-|04. |Javascript  |Behavior - Programing Language        |
-
-
-![profile](/src/profile.webp)
-** JUAN PABLO BECERRA SAAVEDRA ***
-
-[ADSO FILES DRIVE](https://tinyurl/wnkk334u)
-
-
-[VERCEL URL](https://vercel.app)
+[📂 ADSO FILES DRIVE](https://tinyurl.com)
+[🚀 VERCEL URL](https://vercel.app)
