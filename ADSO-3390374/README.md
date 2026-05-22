@@ -20,5 +20,5 @@
 
 **JUAN PABLO BECERRA SAAVEDRA**
 
-[📂 ADSO FILES DRIVE](https://tinyur|||||||l.com)
+[📂 ADSO FILES DRIVE](https://tinyur|.com)
 [🚀 VERCEL URL](https://vercel.app)

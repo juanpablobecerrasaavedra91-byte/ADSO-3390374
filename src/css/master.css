@@ -1,7 +1,5 @@
-/* 1. Importación de fuentes */
 @import url('https://googleapis.com');
 
-/* 2. Reset y Base */
 * {
     box-sizing: border-box;
 }
@@ -12,14 +10,12 @@ html, body {
 }
 
 body {
-    /* FONDO NUEVO: Asegúrate de que el nombre del archivo sea correcto */
-    background-color: #1a0b2e; /* Color oscuro base por si no carga la imagen */
+    background-color: #1a0b2e; 
     background-image: url("fondo.jpg"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -28,11 +24,20 @@ body {
     color: #fff;
 }
 
-/* 3. Contenedor Principal */
+body.emmet {
+    background-image: radial-gradient(circle at 100% 35%, rgba(255,255,255,1) 0%, rgba(200,255,255,1) 25%, rgba(100,253,240,1) 55%, rgba(30,255,210,1) 90%),
+            radial-gradient(circle at 15% 15%, rgba(253,255,235,1) 0%, rgba(210,255,230,0.8) 40%, rgba(100,253,240,0) 80%);
+    background-blend-mode: screen;
+    background-attachment: scroll;
+    color: #000;
+    display: block;
+    padding: 2rem;
+}
+
 main {
     width: 380px;
     padding: 2rem;
-    background: rgba(20, 10, 30, 0.7); /* Efecto cristal oscuro */
+    background: rgba(20, 10, 30, 0.7); 
     backdrop-filter: blur(8px);
     border-radius: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -40,7 +45,35 @@ main {
     text-align: center;
 }
 
-/* 4. Encabezado */
+main.emmet-content {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a0b2e;
+}
+
+main.emmet-content h1 {
+    font-weight: 800;
+    color: #1a0b2e;
+    margin-top: 0;
+}
+
+main.emmet-content h4 {
+    font-weight: 500;
+    color: #333;
+}
+
+#logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 4px solid #1a0b2e;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 1rem 0;
+}
+
 header.mainmenu {
     margin-bottom: 2rem;
 }
@@ -48,7 +81,7 @@ header.mainmenu {
 header.mainmenu h1 {
     font-weight: 800;
     font-size: 1.5rem;
-    color: #ff4d94; /* Color neón rosado del fondo */
+    color: #ff4d94; 
     margin-bottom: 1rem;
     border-bottom: 2px solid #ff4d94;
     display: inline-block;
@@ -73,11 +106,10 @@ header.mainmenu h2 {
 header.mainmenu h3, header.mainmenu h4 {
     font-size: 0.85rem;
     font-weight: 300;
-    color: #ffb366; /* Color naranja suave del fondo */
+    color: #ffb366; 
     margin: 5px 0;
 }
 
-/* 5. Menú de Enlaces */
 menu.mainmenu {
     padding: 0;
     display: flex;
@@ -97,7 +129,7 @@ menu.mainmenu a {
 }
 
 menu.mainmenu a span {
-    background: linear-gradient(45deg, #ff4d94, #ffb366); /* Degradado neón */
+    background: linear-gradient(45deg, #ff4d94, #ffb366); 
     color: #1a0b2e;
     font-weight: 800;
     font-size: 1.3rem;
@@ -125,7 +157,6 @@ menu.mainmenu a aside small {
     font-size: 0.7rem;
 }
 
-/* 6. Efecto Hover */
 menu.mainmenu a:hover {
     background: rgba(255, 77, 148, 0.2);
     transform: scale(1.05) translateX(10px);
@@ -134,4 +165,82 @@ menu.mainmenu a:hover {
 
 menu.mainmenu a:hover span {
     box-shadow: 0 0 15px #ff4d94;
+}
+
+/* Secciones corregidas para CSS Puro */
+section {
+    background-color: #4b326b;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+section h2 {
+    background-color: rgb(105, 194, 87);
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    margin: 0;
+    position: relative;
+}
+
+section h2 .en {
+    font-style: normal;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: #ffb366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+}
+
+section h4 {
+    border-bottom: 1px solid #ffb366;
+    margin: 0;
+}
+
+section xmp {
+    background-color: cadetblue;
+    padding-bottom: 1rem;
+    border-radius: 0.4rem;
+    color: crimson;
+}
+
+body.emmet header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+body.emmet header a.a {
+    display: inline-flex;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.emmet header a.a svg {
+    fill: #1a0b2e;
+    transition: fill 0.3s ease;
+}
+
+body.emmet header a.a:hover {
+    background: #1a0b2e;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(26, 11, 46, 0.2);
+}
+
+body.emmet header a.a:hover svg {
+    fill: #ffffff;
+}
+
+* {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cstyle%3E.dot%7Bfill:%23ff4d94;%7D.frame%7Bfill:none;stroke:%23ffb366;stroke-width:1.5;stroke-linecap:round;transform-origin:16px 16px;animation:spin 6s linear infinite;%7D@keyframes spin%7B100%25%7Btransform:rotate(360deg);%7D%7D%3C/style%3E%3Ccircle class='dot' cx='16' cy='16' r='2'/%3E%3Cpath class='frame' d='M10,8 L8,8 L8,10 M22,8 L24,8 L24,10 M8,22 L8,24 L10,24 M24,22 L24,24 L22,24'/%3E%3C/svg%3E") 16 16, auto !important;
 }
