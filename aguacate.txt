@@ -14,7 +14,7 @@
             <h1>ADSO-3390374</h1>
             
             <!-- Ruta de tu imagen corregida -->
-            <img src="src/css/profile.webp" alt="Foto de perfil de Juan Pablo">
+            <img src="src/imagen.png" alt="Foto de perfil de Juan Pablo">
             
             <h2>Análisis y Desarrollo de Software</h2>
             <h3>Centro de Procesos Industriales y Construcción</h3>
