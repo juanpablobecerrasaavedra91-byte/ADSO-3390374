@@ -16,9 +16,9 @@
 
 ---
 
-![profile](./src/profile.webp)
+![profile](src/profile.webp)
 
 **JUAN PABLO BECERRA SAAVEDRA**
 
-[📂 ADSO FILES DRIVE](https://tinyurl.com)
+[📂 ADSO FILES DRIVE](https://tinyur|||||||l.com)
 [🚀 VERCEL URL](https://vercel.app)
