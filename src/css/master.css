@@ -10,8 +10,10 @@ html, body {
 }
 
 body {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-color: #FFA484;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 1000'%3E%3Cg fill='%23ffa46a'%3E%3Cpolygon points='1000 -50 0 -50 500 450'/%3E%3Cpolygon points='550 500 1050 1000 1050 0'/%3E%3Cpolygon points='-50 0 -50 1000 450 500'/%3E%3Cpolygon points='0 1050 1000 1050 500 550'/%3E%3C/g%3E%3Cg fill='%23ffa450'%3E%3Cpolygon points='1000 -133.3 0 -133.3 500 366.7'/%3E%3Cpolygon points='633.3 500 1133.3 1000 1133.3 0'/%3E%3Cpolygon points='-133.3 0 -133.3 1000 366.7 500'/%3E%3Cpolygon points='0 1133.3 1000 1133.3 500 633.3'/%3E%3C/g%3E%3Cg fill='%23ffa336'%3E%3Cpolygon points='1000 -216.7 0 -216.7 500 283.3'/%3E%3Cpolygon points='716.7 500 1216.7 1000 1216.7 0'/%3E%3Cpolygon points='-216.7 0 -216.7 1000 283.3 500'/%3E%3Cpolygon points='0 1216.7 1000 1216.7 500 716.7'/%3E%3C/g%3E%3Cg fill='%23FFA31C'%3E%3Cpolygon points='1000 -300 0 -300 500 200'/%3E%3Cpolygon points='800 500 1300 1000 1300 0'/%3E%3Cpolygon points='-300 0 -300 1000 200 500'/%3E%3Cpolygon points='0 1300 1000 1300 500 800'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%23C8FF9B' points='0 707.1 0 292.9 292.9 0 707.1 0 1000 292.9 1000 707.1 707.1 1000 292.9 1000'/%3E%3Cg fill='%23d6e87b'%3E%3Cpolygon points='464.6 -242.5 -242.5 464.6 464.6 464.6'/%3E%3Cpolygon points='535.4 464.6 1242.5 464.6 535.4 -242.5'/%3E%3Cpolygon points='-242.5 535.4 464.6 1242.5 464.6 535.4'/%3E%3Cpolygon points='535.4 1242.5 1242.5 535.4 535.4 535.4'/%3E%3C/g%3E%3Cg fill='%23e4d15c'%3E%3Cpolygon points='405.7 -301.4 -301.4 405.7 405.7 405.7'/%3E%3Cpolygon points='594.3 405.7 1301.4 405.7 594.3 -301.4'/%3E%3Cpolygon points='-301.4 594.3 405.7 1301.4 405.7 594.3'/%3E%3Cpolygon points='594.3 1301.4 1301.4 594.3 594.3 594.3'/%3E%3C/g%3E%3Cg fill='%23f1ba3c'%3E%3Cpolygon points='346.8 -360.3 -360.3 346.8 346.8 346.8'/%3E%3Cpolygon points='653.2 346.8 1360.3 346.8 653.2 -360.3'/%3E%3Cpolygon points='-360.3 653.2 346.8 1360.3 346.8 653.2'/%3E%3Cpolygon points='653.2 1360.3 1360.3 653.2 653.2 653.2'/%3E%3C/g%3E%3Cg fill='%23FFA31C'%3E%3Cpolygon points='287.9 -419.2 -419.2 287.9 287.9 287.9'/%3E%3Cpolygon points='712.1 287.9 1419.2 287.9 712.1 -419.2'/%3E%3Cpolygon points='-419.2 712.1 287.9 1419.2 287.9 712.1'/%3E%3Cpolygon points='712.1 1419.2 1419.2 712.1 712.1 712.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -20,55 +22,31 @@ body {
     color: #fff;
 }
 
-body.emmet {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    background-attachment: fixed;
-    color: #fff;
-    display: block;
-    padding: 2rem;
-}
-
 main {
-    width: 380px;
+    width: 420px;
     padding: 2rem;
-    background: rgba(20, 10, 30, 0.7); 
+    background: rgba(20, 10, 30, 0.7);
     backdrop-filter: blur(8px);
     border-radius: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-main.emmet-content {
-    margin: 0 auto 3rem auto;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(0);
-    border: none;
-    color: #1a0b2e;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+main::-webkit-scrollbar {
+    width: 8px;
 }
 
-main.emmet-content h1 {
-    font-weight: 800;
-    color: #5b4a8b;
-    margin-top: 0;
-    font-size: 2.5rem;
+main::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
-main.emmet-content h4 {
-    font-weight: 500;
-    color: #555;
-}
-
-#logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    border: 4px solid #5b4a8b;
-    border-radius: 1.5rem;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    margin: 1rem 0;
+main::-webkit-scrollbar-thumb {
+    background: #ff4d94;
+    border-radius: 10px;
 }
 
 header.mainmenu {
@@ -77,8 +55,8 @@ header.mainmenu {
 
 header.mainmenu h1 {
     font-weight: 800;
-    font-size: 1.5rem;
-    color: #ff4d94; 
+    font-size: 1.8rem;
+    color: #ff4d94;
     margin-bottom: 1rem;
     border-bottom: 2px solid #ff4d94;
     display: inline-block;
@@ -87,34 +65,39 @@ header.mainmenu h1 {
 header.mainmenu img {
     border: 4px solid #ff4d94;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 120px;
     object-fit: cover;
     margin-bottom: 1rem;
     box-shadow: 0 0 20px rgba(255, 77, 148, 0.4);
 }
 
 header.mainmenu h2 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #ffb366;
 }
 
-header.mainmenu h3, header.mainmenu h4 {
+header.mainmenu p {
     font-size: 0.85rem;
     font-weight: 300;
-    color: #ffb366; 
     margin: 5px 0;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 menu.mainmenu {
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    margin: 0;
+    list-style: none;
 }
 
-menu.mainmenu a {
+.menu-item {
+    list-style: none;
+    margin-bottom: 0.8rem;
+}
+
+.menu-item > a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -125,13 +108,13 @@ menu.mainmenu a {
     transition: 0.4s ease;
 }
 
-menu.mainmenu a span {
-    background: linear-gradient(45deg, #ff4d94, #ffb366); 
+.menu-item > a span {
+    background: linear-gradient(45deg, #ff4d94, #ffb366);
     color: #1a0b2e;
     font-weight: 800;
     font-size: 1.3rem;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -139,115 +122,131 @@ menu.mainmenu a span {
     margin-right: 1rem;
 }
 
-menu.mainmenu a aside {
+.menu-item > a aside {
     text-align: left;
 }
 
-menu.mainmenu a aside h4 {
+.menu-item > a aside h4 {
     margin: 0;
     color: #fff;
     font-size: 1rem;
 }
 
-menu.mainmenu a aside small {
+.menu-item > a aside small {
     color: #ffb366;
     font-size: 0.7rem;
 }
 
-menu.mainmenu a:hover {
+.menu-item > a:hover {
     background: rgba(255, 77, 148, 0.2);
-    transform: scale(1.05) translateX(10px);
+    transform: scale(1.02) translateX(8px);
     border-color: #ff4d94;
 }
 
-menu.mainmenu a:hover span {
+.menu-item > a:hover span {
     box-shadow: 0 0 15px #ff4d94;
 }
 
-/* ========== SECCIONES MEJORADAS PARA EMMET ========== */
-section {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Submenu */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    padding-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.menu-item:hover .submenu {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-section h2 {
-    background: linear-gradient(135deg, #5b4a8b, #8b6cb0);
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    margin: -0.75rem -0.75rem 1rem -0.75rem;
-    color: white;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-section p {
-    color: #333;
-    line-height: 1.6;
+.submenu li {
     margin: 0.5rem 0;
 }
 
-section h4 {
-    color: #5b4a8b;
-    border-left: 4px solid #5b4a8b;
-    padding-left: 0.75rem;
-    margin: 1rem 0 0.5rem 0;
-    font-weight: 600;
-}
-
-section xmp {
-    background: #1e1a2f;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    color: #b8f2b0;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    margin: 0.5rem 0 0 0;
-    border-left: 4px solid #b8f2b0;
-}
-
-body.emmet header {
+.submenu a {
     display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2rem;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.5rem 0.8rem;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+    gap: 0.8rem;
 }
 
-body.emmet header a.a {
-    display: inline-flex;
-    padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.submenu a span {
+    background: linear-gradient(45deg, #ff4d94, #ffb366);
+    color: #1a0b2e;
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body.emmet header a.a svg {
-    fill: white;
-    transition: fill 0.3s ease;
+.submenu a aside h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 0.85rem;
 }
 
-body.emmet header a.a:hover {
-    background: white;
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.submenu a aside small {
+    color: #ffb366;
+    font-size: 0.65rem;
+    display: block;
 }
 
-body.emmet header a.a:hover svg {
-    fill: #5b4a8b;
+.submenu a:hover {
+    background: rgba(255, 77, 148, 0.2);
+    transform: translateX(8px);
+    border-color: #ff4d94;
 }
 
-* {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cstyle%3E.dot%7Bfill:%23ff4d94;%7D.frame%7Bfill:none;stroke:%23ffb366;stroke-width:1.5;stroke-linecap:round;transform-origin:16px 16px;animation:spin 6s linear infinite;%7D@keyframes spin%7B100%25%7Btransform:rotate(360deg);%7D%7D%3C/style%3E%3Ccircle class='dot' cx='16' cy='16' r='2'/%3E%3Cpath class='frame' d='M10,8 L8,8 L8,10 M22,8 L24,8 L24,10 M8,22 L8,24 L10,24 M24,22 L24,24 L22,24'/%3E%3C/svg%3E") 16 16, auto !important;
+.submenu a:hover span {
+    box-shadow: 0 0 12px #ff4d94;
+}
+
+/* Descripciones */
+.descripciones {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.descripciones details {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.descripciones details:hover {
+    background: rgba(255, 77, 148, 0.15);
+    transform: translateX(5px);
+}
+
+.descripciones summary {
+    font-weight: 600;
+    color: #ffb366;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.descripciones p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
 }
