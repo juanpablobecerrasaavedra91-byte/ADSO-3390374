@@ -20,7 +20,6 @@
         <h4>Plugin for faster HTML and CSS coding.</h4>
     </main>
 
-    <!-- FASE 01 - CHILD -->
     <section>
         <h2>Child</h2>
         <p>creates child elements ( nesting )</p>
@@ -36,7 +35,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 02 - SIBLING -->
     <section>
         <h2>Sibling</h2>
         <p>creates sibling elements</p>
@@ -50,7 +48,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 03 - MULTIPLICATION -->
     <section>
         <h2>Multiplication</h2>
         <p>repeats elements multiple times</p>
@@ -66,7 +63,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 04 - CLASS -->
     <section>
         <h2>Class</h2>
         <p>creates a class attribute</p>
@@ -78,7 +74,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 05 - CLASSES -->
     <section>
         <h2>Classes</h2>
         <p>creates multiple class attributes</p>
@@ -90,7 +85,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 06 - ID -->
     <section>
         <h2>Id</h2>
         <p>creates an ID attribute</p>
@@ -102,7 +96,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 07 - TEXT -->
     <section>
         <h2>Text</h2>
         <p>inserts text content</p>
@@ -114,7 +107,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 08 - CUSTOM ATTRIBUTE -->
     <section>
         <h2>Custom Attribute</h2>
         <p>creates custom attributes</p>
@@ -126,7 +118,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 09 - ITEM NUMBERING -->
     <section>
         <h2>Item Numbering</h2>
         <p>adds consecutive numbers</p>
@@ -142,7 +133,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 10 - REVERSE NUMBERING -->
     <section>
         <h2>Reverse Numbering</h2>
         <p>inverts numbering order</p>
@@ -158,7 +148,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 11 - BASE NUMBERING -->
     <section>
         <h2>Base Numbering</h2>
         <p>defines a base number for sequences</p>
@@ -175,7 +164,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 12 - CLIMB UP -->
     <section>
         <h2>Climb Up</h2>
         <p>moves up one level</p>
@@ -192,7 +180,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 13 - GROUPING -->
     <section>
         <h2>Grouping</h2>
         <p>groups elements together</p>
@@ -209,7 +196,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 14 - LOREM -->
     <section>
         <h2>Lorem</h2>
         <p>generates placeholder text</p>
@@ -221,7 +207,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 15 - HTML DOCUMENTS -->
     <section>
         <h2>HTML Documents</h2>
         <p>creates various HTML document types</p>
@@ -243,7 +228,6 @@
         </xmp>
     </section>
 
-    <!-- FASE 16 - META TAGS -->
     <section>
         <h2>Meta Tags</h2>
         <p>generates meta tags</p>
@@ -255,25 +239,47 @@
         </xmp>
     </section>
 
-    <!-- FASE 17 - CHALLENGE -->
     <section>
         <h2>Challenge</h2>
-        <p>generates Emmet challenges for practice</p>
+        <p>generates a complete Bootstrap navbar navigation</p>
         <h4>example</h4>
-        <p>div.container>ul>li.item$*5>lorem5</p>
+        <p>header#header>nav.navbar.navbar-inverse>div.container>(div.navbar-header>(button[type="button"].navbar-toggle>span.sr-only{Toggle navigation}+span.icon-bar*3)+a.navbar-brand[href="index.php"]>img[src="imgs/logo.png" alt=""])+div.collapse>ul.nav.navbar-nav>(li>a.link[href="index.html"]{Inicio})+(li.active.link>a[href="login.html"]{Ingresar})+(li>a.link[href="registro.html"]{Registrarse})+(li>a.link[href="contacto.html"]{Contacto})</p>
         <h4>Result</h4>
         <xmp>
-    <div class="container">
-        <ul>
-            <li class="item1">Lorem ipsum dolor sit amet.</li>
-            <li class="item2">Consectetur adipisicing elit. Soluta.</li>
-            <li class="item3">Sed do eiusmod tempor incididunt.</li>
-            <li class="item4">Ut labore et dolore magna aliqua.</li>
-            <li class="item5">Ut enim ad minim veniam.</li>
-        </ul>
-    </div>
+<header id="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">
+                    <img src="imgs/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="active link">
+                        <a href="login.html">Ingresar</a>
+                    </li>
+                    <li>
+                        <a class="link" href="registro.html">Registrarse</a>
+                    </li>
+                    <li>
+                        <a class="link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
         </xmp>
     </section>
-
 </body>
 </html>
