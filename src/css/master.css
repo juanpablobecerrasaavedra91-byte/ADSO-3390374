@@ -2,90 +2,193 @@
 
 * {
     box-sizing: border-box;
-}
-
-html, body {
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #FFA484;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 1000'%3E%3Cg fill='%23ffa46a'%3E%3Cpolygon points='1000 -50 0 -50 500 450'/%3E%3Cpolygon points='550 500 1050 1000 1050 0'/%3E%3Cpolygon points='-50 0 -50 1000 450 500'/%3E%3Cpolygon points='0 1050 1000 1050 500 550'/%3E%3C/g%3E%3Cg fill='%23ffa450'%3E%3Cpolygon points='1000 -133.3 0 -133.3 500 366.7'/%3E%3Cpolygon points='633.3 500 1133.3 1000 1133.3 0'/%3E%3Cpolygon points='-133.3 0 -133.3 1000 366.7 500'/%3E%3Cpolygon points='0 1133.3 1000 1133.3 500 633.3'/%3E%3C/g%3E%3Cg fill='%23ffa336'%3E%3Cpolygon points='1000 -216.7 0 -216.7 500 283.3'/%3E%3Cpolygon points='716.7 500 1216.7 1000 1216.7 0'/%3E%3Cpolygon points='-216.7 0 -216.7 1000 283.3 500'/%3E%3Cpolygon points='0 1216.7 1000 1216.7 500 716.7'/%3E%3C/g%3E%3Cg fill='%23FFA31C'%3E%3Cpolygon points='1000 -300 0 -300 500 200'/%3E%3Cpolygon points='800 500 1300 1000 1300 0'/%3E%3Cpolygon points='-300 0 -300 1000 200 500'/%3E%3Cpolygon points='0 1300 1000 1300 500 800'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%23C8FF9B' points='0 707.1 0 292.9 292.9 0 707.1 0 1000 292.9 1000 707.1 707.1 1000 292.9 1000'/%3E%3Cg fill='%23d6e87b'%3E%3Cpolygon points='464.6 -242.5 -242.5 464.6 464.6 464.6'/%3E%3Cpolygon points='535.4 464.6 1242.5 464.6 535.4 -242.5'/%3E%3Cpolygon points='-242.5 535.4 464.6 1242.5 464.6 535.4'/%3E%3Cpolygon points='535.4 1242.5 1242.5 535.4 535.4 535.4'/%3E%3C/g%3E%3Cg fill='%23e4d15c'%3E%3Cpolygon points='405.7 -301.4 -301.4 405.7 405.7 405.7'/%3E%3Cpolygon points='594.3 405.7 1301.4 405.7 594.3 -301.4'/%3E%3Cpolygon points='-301.4 594.3 405.7 1301.4 405.7 594.3'/%3E%3Cpolygon points='594.3 1301.4 1301.4 594.3 594.3 594.3'/%3E%3C/g%3E%3Cg fill='%23f1ba3c'%3E%3Cpolygon points='346.8 -360.3 -360.3 346.8 346.8 346.8'/%3E%3Cpolygon points='653.2 346.8 1360.3 346.8 653.2 -360.3'/%3E%3Cpolygon points='-360.3 653.2 346.8 1360.3 346.8 653.2'/%3E%3Cpolygon points='653.2 1360.3 1360.3 653.2 653.2 653.2'/%3E%3C/g%3E%3Cg fill='%23FFA31C'%3E%3Cpolygon points='287.9 -419.2 -419.2 287.9 287.9 287.9'/%3E%3Cpolygon points='712.1 287.9 1419.2 287.9 712.1 -419.2'/%3E%3Cpolygon points='-419.2 712.1 287.9 1419.2 287.9 712.1'/%3E%3Cpolygon points='712.1 1419.2 1419.2 712.1 712.1 712.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
+    background: #1a0b2e;
+    overflow-x: hidden;
+    position: relative;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at 20% 50%, #ff4d94 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, #ffb366 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, #a855f7 0%, transparent 50%),
+        #1a0b2e;
+    animation: bgShift 15s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.1) rotate(3deg); }
+}
+
+/* Animación de partículas flotantes */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(2px 2px at 60% 20%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(2px 2px at 80% 80%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(2px 2px at 10% 90%, rgba(255,255,255,0.15), transparent),
+        radial-gradient(3px 3px at 70% 40%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(2px 2px at 90% 10%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(3px 3px at 30% 50%, rgba(255,255,255,0.15), transparent);
+    background-size: 200% 200%;
+    animation: floatParticles 20s linear infinite;
+}
+
+@keyframes floatParticles {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* ========== MAIN CARD ========== */
 main {
-    width: 420px;
-    padding: 2rem;
-    background: rgba(20, 10, 30, 0.7);
-    backdrop-filter: blur(8px);
+    width: 440px;
+    max-width: 92vw;
+    padding: 2rem 1.8rem;
+    background: rgba(20, 10, 30, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
     text-align: center;
     max-height: 90vh;
     overflow-y: auto;
+    position: relative;
+    animation: fadeIn 0.8s ease-out;
 }
 
-main::-webkit-scrollbar {
-    width: 8px;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-main::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
+main::-webkit-scrollbar { width: 6px; }
+main::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
 main::-webkit-scrollbar-thumb {
-    background: #ff4d94;
+    background: linear-gradient(180deg, #ff4d94, #ffb366);
     border-radius: 10px;
 }
 
+/* ========== BACK BUTTON ========== */
+.back-btn {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background: rgba(255,77,148,0.25);
+    border-color: #ff4d94;
+    transform: translateX(-4px);
+    box-shadow: 0 0 20px rgba(255,77,148,0.3);
+}
+
+.back-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+}
+
+/* ========== HEADER ========== */
 header.mainmenu {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 header.mainmenu h1 {
     font-weight: 800;
     font-size: 1.8rem;
-    color: #ff4d94;
+    background: linear-gradient(135deg, #ff4d94, #ffb366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #ff4d94;
-    display: inline-block;
+    letter-spacing: 1px;
 }
 
 header.mainmenu img {
-    border: 4px solid #ff4d94;
+    border: 3px solid rgba(255, 77, 148, 0.4);
     border-radius: 50%;
     height: 120px;
     width: 120px;
     object-fit: cover;
     margin-bottom: 1rem;
-    box-shadow: 0 0 20px rgba(255, 77, 148, 0.4);
+    box-shadow: 0 0 30px rgba(255, 77, 148, 0.25);
+    transition: all 0.5s ease;
+}
+
+header.mainmenu img:hover {
+    transform: scale(1.05);
+    border-color: #ff4d94;
+    box-shadow: 0 0 40px rgba(255, 77, 148, 0.4);
 }
 
 header.mainmenu h2 {
     font-size: 1.3rem;
     font-weight: 600;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0.2rem;
     color: #ffb366;
 }
 
-header.mainmenu p {
-    font-size: 0.85rem;
-    font-weight: 300;
-    margin: 5px 0;
-    color: rgba(255, 255, 255, 0.9);
+header.mainmenu h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin: 0.2rem 0;
 }
 
+header.mainmenu h4 {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin: 0.2rem 0;
+}
+
+header.mainmenu p {
+    font-size: 0.82rem;
+    font-weight: 300;
+    margin: 3px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========== MENU ========== */
 menu.mainmenu {
     padding: 0;
     margin: 0;
@@ -94,60 +197,300 @@ menu.mainmenu {
 
 .menu-item {
     list-style: none;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
 }
 
 .menu-item > a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.6rem 0.8rem 0.6rem 0.6rem;
     border-radius: 5rem;
-    transition: 0.4s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item > a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255,77,148,0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.menu-item > a:hover::before {
+    opacity: 1;
 }
 
 .menu-item > a span {
-    background: linear-gradient(45deg, #ff4d94, #ffb366);
+    background: linear-gradient(135deg, #ff4d94, #ffb366);
     color: #1a0b2e;
     font-weight: 800;
-    font-size: 1.3rem;
-    width: 50px;
-    height: 50px;
+    font-size: 1.2rem;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.35s ease;
 }
 
 .menu-item > a aside {
     text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
 .menu-item > a aside h4 {
     margin: 0;
     color: #fff;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .menu-item > a aside small {
     color: #ffb366;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
+    opacity: 0.85;
 }
 
 .menu-item > a:hover {
-    background: rgba(255, 77, 148, 0.2);
-    transform: scale(1.02) translateX(8px);
-    border-color: #ff4d94;
+    background: rgba(255, 77, 148, 0.12);
+    transform: translateX(8px);
+    border-color: rgba(255, 77, 148, 0.3);
 }
 
 .menu-item > a:hover span {
-    box-shadow: 0 0 15px #ff4d94;
+    box-shadow: 0 0 20px rgba(255, 77, 148, 0.5);
+    transform: scale(1.05);
 }
 
-/* Submenu */
+/* ========== EMMET PAGE ========== */
+main.emmet-page {
+    width: 800px;
+    max-width: 95vw;
+    text-align: left;
+}
+
+.emmet-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.emmet-header h1 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #ff4d94, #ffb366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+}
+
+.emmet-header img {
+    height: 80px;
+    margin: 0.8rem 0;
+    filter: drop-shadow(0 0 15px rgba(255,77,148,0.3));
+    transition: transform 0.4s ease;
+}
+
+.emmet-header img:hover {
+    transform: scale(1.08) rotate(-5deg);
+}
+
+.emmet-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Table container */
+.table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.2);
+}
+
+.table-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #ff4d94, #ffb366);
+    border-radius: 10px;
+}
+
+.emmet-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.emmet-table thead {
+    background: rgba(255,77,148,0.15);
+}
+
+.emmet-table th {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #ffb366;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.emmet-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+}
+
+.emmet-table tbody tr {
+    transition: background 0.25s ease;
+}
+
+.emmet-table tbody tr:hover {
+    background: rgba(255,77,148,0.08);
+}
+
+.emmet-table td:first-child {
+    color: #ff4d94;
+    font-weight: 700;
+    width: 40px;
+    text-align: center;
+}
+
+.emmet-table td:nth-child(2) {
+    min-width: 160px;
+}
+
+.emmet-table td:nth-child(2) small {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.7rem;
+    display: block;
+}
+
+.emmet-table td:nth-child(3) {
+    min-width: 180px;
+}
+
+.emmet-table code {
+    background: rgba(0,0,0,0.4);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 0.78rem;
+    color: #ffb366;
+    word-break: break-all;
+}
+
+.emmet-table td:last-child code {
+    color: #a0e7a0;
+    font-size: 0.72rem;
+}
+
+/* Exercise section */
+.exercise-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.exercise-section h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffb366;
+    margin-bottom: 0.5rem;
+}
+
+.exercise-section > p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1rem;
+}
+
+.code-block {
+    background: rgba(0,0,0,0.5);
+    border-radius: 0.8rem;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 0.8rem;
+}
+
+.code-block code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: #a0e7a0;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.code-block.result code {
+    color: #e0e0e0;
+}
+
+.exercise-section details {
+    margin-top: 1rem;
+}
+
+.exercise-section details summary {
+    color: #ff4d94;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+}
+
+.exercise-section details summary:hover {
+    color: #ffb366;
+}
+
+@media (max-width: 600px) {
+    .emmet-table {
+        font-size: 0.72rem;
+    }
+
+    .emmet-table th,
+    .emmet-table td {
+        padding: 0.6rem 0.6rem;
+    }
+
+    .emmet-table td:nth-child(2) {
+        min-width: 120px;
+    }
+
+    .emmet-table td:nth-child(3) {
+        min-width: 130px;
+    }
+
+    .emmet-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .exercise-section {
+        padding: 1rem;
+    }
+}
+
+/* ========== SUBMENU ========== */
 .submenu {
     max-height: 0;
     overflow: hidden;
@@ -175,19 +518,20 @@ menu.mainmenu {
     align-items: center;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.45rem 0.8rem;
     border-radius: 2rem;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
     gap: 0.8rem;
 }
 
 .submenu a span {
-    background: linear-gradient(45deg, #ff4d94, #ffb366);
+    background: linear-gradient(135deg, #ff4d94, #ffb366);
     color: #1a0b2e;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     width: 30px;
+    min-width: 30px;
     height: 30px;
     border-radius: 50%;
     display: flex;
@@ -199,42 +543,46 @@ menu.mainmenu {
     margin: 0;
     color: #fff;
     font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .submenu a aside small {
     color: #ffb366;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     display: block;
+    opacity: 0.85;
 }
 
 .submenu a:hover {
-    background: rgba(255, 77, 148, 0.2);
+    background: rgba(255, 77, 148, 0.12);
     transform: translateX(8px);
-    border-color: #ff4d94;
+    border-color: rgba(255, 77, 148, 0.3);
 }
 
 .submenu a:hover span {
-    box-shadow: 0 0 12px #ff4d94;
+    box-shadow: 0 0 15px rgba(255, 77, 148, 0.4);
 }
 
-/* Descripciones */
+/* ========== DESCRIPCIONES ========== */
 .descripciones {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .descripciones details {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 1rem;
     padding: 0.6rem 1rem;
     margin: 0.5rem 0;
     transition: all 0.3s ease;
     text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .descripciones details:hover {
-    background: rgba(255, 77, 148, 0.15);
+    background: rgba(255, 77, 148, 0.1);
+    border-color: rgba(255, 77, 148, 0.2);
     transform: translateX(5px);
 }
 
@@ -248,5 +596,59 @@ menu.mainmenu {
 .descripciones p {
     margin: 0.5rem 0 0 0;
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 500px) {
+    main {
+        max-width: 100vw;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 1.5rem 1.2rem;
+    }
+
+    header.mainmenu h1 {
+        font-size: 1.4rem;
+    }
+
+    header.mainmenu img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .menu-item > a {
+        padding: 0.5rem 0.6rem 0.5rem 0.5rem;
+    }
+
+    .menu-item > a span {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        font-size: 1rem;
+        margin-right: 0.7rem;
+    }
+
+    .back-btn {
+        top: 0.8rem;
+        left: 1rem;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 480px;
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* ========== SCROLLBAR GLOBAL ========== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a0b2e; }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff4d94, #ffb366);
+    border-radius: 10px;
 }

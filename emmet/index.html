@@ -1,285 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmet - Guía Completa de Fases</title>
+    <title>Emmet - Guía Completa</title>
     <link rel="stylesheet" href="../src/css/master.css">
 </head>
-<body class="emmet">
+<body>
 
-    <header>
-        <a href="../index.html" class="a">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path></svg>
+    <main class="emmet-page">
+        <a href="../index.html" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68Z"></path></svg>
         </a>
-    </header>
 
-    <main class="emmet-content">
-        <h1>EMMET</h1>
-        <img src="../src/logo.png" alt="Logo de Emmet" id="logo">
-        <h4>Plugin for faster HTML and CSS coding.</h4>
+        <header class="emmet-header">
+            <h1>EMMET</h1>
+            <img src="../src/logo.png" alt="Logo Emmet">
+            <p>Plugin for faster HTML and CSS coding.</p>
+        </header>
+
+        <div class="table-container">
+            <table class="emmet-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Concepto</th>
+                        <th>Abreviatura</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td><strong>Child</strong><br><small>Crea elementos hijos (anidación)</small></td>
+                        <td><code>ul>li>a</code></td>
+                        <td><code>&lt;ul&gt;&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td><strong>Sibling</strong><br><small>Crea elementos hermanos</small></td>
+                        <td><code>section+header+nav</code></td>
+                        <td><code>&lt;section&gt;&lt;/section&gt;&lt;header&gt;&lt;/header&gt;&lt;nav&gt;&lt;/nav&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td><strong>Multiplication</strong><br><small>Repite elementos N veces</small></td>
+                        <td><code>ul>li*3</code></td>
+                        <td><code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td><strong>Class</strong><br><small>Crea un atributo class</small></td>
+                        <td><code>div.contenedor</code></td>
+                        <td><code>&lt;div class="contenedor"&gt;&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td><strong>Multiple Classes</strong><br><small>Varias clases en un elemento</small></td>
+                        <td><code>div.clase1.clase2.clase3</code></td>
+                        <td><code>&lt;div class="clase1 clase2 clase3"&gt;&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td><strong>ID</strong><br><small>Crea un atributo id</small></td>
+                        <td><code>nav#menu</code></td>
+                        <td><code>&lt;nav id="menu"&gt;&lt;/nav&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td><strong>Text</strong><br><small>Inserta contenido de texto</small></td>
+                        <td><code>div{Hola Mundo}</code></td>
+                        <td><code>&lt;div&gt;Hola Mundo&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td><strong>Custom Attribute</strong><br><small>Atributos personalizados</small></td>
+                        <td><code>a[href="https://google.com" target="_blank"]</code></td>
+                        <td><code>&lt;a href="https://google.com" target="_blank"&gt;&lt;/a&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td><strong>Item Numbering</strong><br><small>Numeración consecutiva</small></td>
+                        <td><code>ul>li.item$*3</code></td>
+                        <td><code>&lt;ul&gt;&lt;li class="item1"&gt;&lt;/li&gt;&lt;li class="item2"&gt;&lt;/li&gt;&lt;li class="item3"&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>Reverse Numbering</strong><br><small>Numeración inversa</small></td>
+                        <td><code>ul>li.item$@-*3</code></td>
+                        <td><code>&lt;ul&gt;&lt;li class="item3"&gt;&lt;/li&gt;&lt;li class="item2"&gt;&lt;/li&gt;&lt;li class="item1"&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><strong>Base Numbering</strong><br><small>Numeración desde base</small></td>
+                        <td><code>ul>li.item$@3*4</code></td>
+                        <td><code>&lt;ul&gt;&lt;li class="item3"&gt;&lt;/li&gt;&lt;li class="item4"&gt;&lt;/li&gt;&lt;li class="item5"&gt;&lt;/li&gt;&lt;li class="item6"&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><strong>Climb Up</strong><br><small>Sube un nivel en el árbol</small></td>
+                        <td><code>section>article>div^p</code></td>
+                        <td><code>&lt;section&gt;&lt;article&gt;&lt;div&gt;&lt;/div&gt;&lt;/article&gt;&lt;p&gt;&lt;/p&gt;&lt;/section&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><strong>Grouping</strong><br><small>Agrupa elementos</small></td>
+                        <td><code>(header>nav)+(section>article)</code></td>
+                        <td><code>&lt;header&gt;&lt;nav&gt;&lt;/nav&gt;&lt;/header&gt;&lt;section&gt;&lt;article&gt;&lt;/article&gt;&lt;/section&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><strong>Lorem</strong><br><small>Texto placeholder</small></td>
+                        <td><code>lorem20</code></td>
+                        <td><code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos illo.</code></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><strong>HTML Document</strong><br><small>Estructura HTML5</small></td>
+                        <td><code>html:5</code></td>
+                        <td><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td><strong>Meta Tags</strong><br><small>Meta viewport</small></td>
+                        <td><code>meta:vp</code></td>
+                        <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="exercise-section">
+            <h2>Ejercicio Challenge</h2>
+            <p>Genera un navbar completo de Bootstrap usando una sola línea de Emmet:</p>
+            <div class="code-block">
+                <code>header#header>nav.navbar.navbar-inverse>div.container>(div.navbar-header>(button[type="button"].navbar-toggle>span.sr-only{Toggle navigation}+span.icon-bar*3)+a.navbar-brand[href="index.php"]>img[src="imgs/logo.png" alt=""])+div.collapse>ul.nav.navbar-nav>(li>a.link[href="index.html"]{Inicio})+(li.active.link>a[href="login.html"]{Ingresar})+(li>a.link[href="registro.html"]{Registrarse})+(li>a.link[href="contacto.html"]{Contacto})</code>
+            </div>
+            <details>
+                <summary>Ver resultado</summary>
+                <div class="code-block result">
+                    <code>
+&lt;header id="header"&gt;<br>
+&nbsp;&nbsp;&lt;nav class="navbar navbar-inverse"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="navbar-header"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="navbar-toggle"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="navbar-brand" href="index.php"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="imgs/logo.png" alt=""&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="collapse"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="nav navbar-nav"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class="link" href="index.html"&gt;Inicio&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active link"&gt;&lt;a href="login.html"&gt;Ingresar&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class="link" href="registro.html"&gt;Registrarse&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class="link" href="contacto.html"&gt;Contacto&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/nav&gt;<br>
+&lt;/header&gt;
+                    </code>
+                </div>
+            </details>
+        </section>
     </main>
 
-    <section>
-        <h2>Child</h2>
-        <p>creates child elements ( nesting )</p>
-        <h4>example</h4>
-        <p>ul>li>a</p>
-        <h4>Result</h4>
-        <xmp>
-    <ul>
-        <li>
-            <a href=""></a>
-        </li>
-    </ul>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Sibling</h2>
-        <p>creates sibling elements</p>
-        <h4>example</h4>
-        <p>section+header+nav</p>
-        <h4>Result</h4>
-        <xmp>
-    <section></section>
-    <header></header>
-    <nav></nav>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Multiplication</h2>
-        <p>repeats elements multiple times</p>
-        <h4>example</h4>
-        <p>ul>li*3</p>
-        <h4>Result</h4>
-        <xmp>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Class</h2>
-        <p>creates a class attribute</p>
-        <h4>example</h4>
-        <p>div.contenedor</p>
-        <h4>Result</h4>
-        <xmp>
-    <div class="contenedor"></div>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Classes</h2>
-        <p>creates multiple class attributes</p>
-        <h4>example</h4>
-        <p>div.clase1.clase2.clase3</p>
-        <h4>Result</h4>
-        <xmp>
-    <div class="clase1 clase2 clase3"></div>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Id</h2>
-        <p>creates an ID attribute</p>
-        <h4>example</h4>
-        <p>nav#menu</p>
-        <h4>Result</h4>
-        <xmp>
-    <nav id="menu"></nav>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Text</h2>
-        <p>inserts text content</p>
-        <h4>example</h4>
-        <p>div{Hola Mundo}</p>
-        <h4>Result</h4>
-        <xmp>
-    <div>Hola Mundo</div>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Custom Attribute</h2>
-        <p>creates custom attributes</p>
-        <h4>example</h4>
-        <p>a[href="https://www.google.com" target="_blank"]</p>
-        <h4>Result</h4>
-        <xmp>
-    <a href="https://www.google.com" target="_blank"></a>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Item Numbering</h2>
-        <p>adds consecutive numbers</p>
-        <h4>example</h4>
-        <p>ul>li.item$*3</p>
-        <h4>Result</h4>
-        <xmp>
-    <ul>
-        <li class="item1"></li>
-        <li class="item2"></li>
-        <li class="item3"></li>
-    </ul>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Reverse Numbering</h2>
-        <p>inverts numbering order</p>
-        <h4>example</h4>
-        <p>ul>li.item$@-*3</p>
-        <h4>Result</h4>
-        <xmp>
-    <ul>
-        <li class="item3"></li>
-        <li class="item2"></li>
-        <li class="item1"></li>
-    </ul>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Base Numbering</h2>
-        <p>defines a base number for sequences</p>
-        <h4>example</h4>
-        <p>ul>li.item$@3*4</p>
-        <h4>Result</h4>
-        <xmp>
-    <ul>
-        <li class="item3"></li>
-        <li class="item4"></li>
-        <li class="item5"></li>
-        <li class="item6"></li>
-    </ul>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Climb Up</h2>
-        <p>moves up one level</p>
-        <h4>example</h4>
-        <p>section>article>div^p</p>
-        <h4>Result</h4>
-        <xmp>
-    <section>
-        <article>
-            <div></div>
-        </article>
-        <p></p>
-    </section>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Grouping</h2>
-        <p>groups elements together</p>
-        <h4>example</h4>
-        <p>(header>nav)+(section>article)</p>
-        <h4>Result</h4>
-        <xmp>
-    <header>
-        <nav></nav>
-    </header>
-    <section>
-        <article></article>
-    </section>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Lorem</h2>
-        <p>generates placeholder text</p>
-        <h4>example</h4>
-        <p>lorem20</p>
-        <h4>Result</h4>
-        <xmp>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos illo. Voluptates, quae. Lorem ipsum dolor sit.
-        </xmp>
-    </section>
-
-    <section>
-        <h2>HTML Documents</h2>
-        <p>creates various HTML document types</p>
-        <h4>example</h4>
-        <p>html:5</p>
-        <h4>Result</h4>
-        <xmp>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        
-    </body>
-    </html>
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Meta Tags</h2>
-        <p>generates meta tags</p>
-        <h4>example</h4>
-        <p>meta:vp</p>
-        <h4>Result</h4>
-        <xmp>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </xmp>
-    </section>
-
-    <section>
-        <h2>Challenge</h2>
-        <p>generates a complete Bootstrap navbar navigation</p>
-        <h4>example</h4>
-        <p>header#header>nav.navbar.navbar-inverse>div.container>(div.navbar-header>(button[type="button"].navbar-toggle>span.sr-only{Toggle navigation}+span.icon-bar*3)+a.navbar-brand[href="index.php"]>img[src="imgs/logo.png" alt=""])+div.collapse>ul.nav.navbar-nav>(li>a.link[href="index.html"]{Inicio})+(li.active.link>a[href="login.html"]{Ingresar})+(li>a.link[href="registro.html"]{Registrarse})+(li>a.link[href="contacto.html"]{Contacto})</p>
-        <h4>Result</h4>
-        <xmp>
-<header id="header">
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">
-                    <img src="imgs/logo.png" alt="">
-                </a>
-            </div>
-            <div class="collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="active link">
-                        <a href="login.html">Ingresar</a>
-                    </li>
-                    <li>
-                        <a class="link" href="registro.html">Registrarse</a>
-                    </li>
-                    <li>
-                        <a class="link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-        </xmp>
-    </section>
 </body>
 </html>
