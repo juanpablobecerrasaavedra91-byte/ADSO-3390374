@@ -6,11 +6,9 @@
     <title>14-Video</title>
     <link rel="stylesheet" href="../src/css/master.css">
 </head>
-<body class="emmet">
-    <a href="index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
-        </svg>
+<body>
+    <a href="index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68Z"></path></svg>
     </a>
     <main>
         <header>
@@ -18,9 +16,10 @@
             <h4>Video files</h4>
         </header>
         <section>
-            <video controls width="400">
-                <source src="../src/video/sample.mp4" type="video/mp4">
-                Your browser does not support video.
+            <video controls width="400" playsinline preload="auto">
+                <source src="../src/video/edit.mp4" type="video/mp4">
+                <source src="../src/video/edit.webm" type="video/webm">
+                
             </video>
         </section>
     </main>
