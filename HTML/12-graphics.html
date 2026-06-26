@@ -18,7 +18,8 @@
             <h4>Inline graphics</h4>
         </header>
         <section>
-            <canvas id="myCanvas" width="300" height="200" style="border:1px solid #fff;"></canvas>
+            <p> canvas </p>
+            <canvas id="myCanvas" width="300" height="200" style="border:1px solid #8551c0; background: linear-gradient(to bottom, #8551c0, #ffffff);"></canvas>
             <script>
                 const c = document.getElementById('myCanvas');
                 const ctx = c.getContext('2d');
@@ -26,6 +27,7 @@
                 ctx.fillRect(50, 50, 200, 100);
             </script>
             <br>
+            <p> svg </p>
             <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="100" cy="50" r="40" fill="#ff6600" />
             </svg>
