@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>04-Script</title>
+    <title>14-Video</title>
     <link rel="stylesheet" href="../src/css/master.css">
 </head>
 <body class="emmet">
@@ -14,28 +14,15 @@
     </a>
     <main>
         <header>
-            <h1>04-script</h1>
-            <h4>Inserts JavaScript code.  
-Inserta código en JavaScript.</h4>
+            <h1>14-Video</h1>
+            <h4>Video files</h4>
         </header>
         <section>
-            <h3> Welcome: <small class = "user" >guest</small></h3>
-
-
-
+            <video controls width="400">
+                <source src="../src/video/sample.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
         </section>
-        <script>
-            const user = document.querySelector('.user')
-            let username = prompt ("what your name 💰💰💰💰😡💰💰💰💰")
-            if(username) {
-                user.textContent = username + '🕹️'
-
-            }else {
-                user.textContent = 'Guest 🎉'
-            }
-
-
-
-        </script>
-
+    </main>
+</body>
 </html>

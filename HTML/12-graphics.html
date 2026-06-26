@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>04-Script</title>
+    <title>12-Graphics</title>
     <link rel="stylesheet" href="../src/css/master.css">
 </head>
 <body class="emmet">
@@ -14,28 +14,22 @@
     </a>
     <main>
         <header>
-            <h1>04-script</h1>
-            <h4>Inserts JavaScript code.  
-Inserta código en JavaScript.</h4>
+            <h1>12-Graphics</h1>
+            <h4>Inline graphics</h4>
         </header>
         <section>
-            <h3> Welcome: <small class = "user" >guest</small></h3>
-
-
-
+            <canvas id="myCanvas" width="300" height="200" style="border:1px solid #fff;"></canvas>
+            <script>
+                const c = document.getElementById('myCanvas');
+                const ctx = c.getContext('2d');
+                ctx.fillStyle = '#00ff88';
+                ctx.fillRect(50, 50, 200, 100);
+            </script>
+            <br>
+            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="50" r="40" fill="#ff6600" />
+            </svg>
         </section>
-        <script>
-            const user = document.querySelector('.user')
-            let username = prompt ("what your name 💰💰💰💰😡💰💰💰💰")
-            if(username) {
-                user.textContent = username + '🕹️'
-
-            }else {
-                user.textContent = 'Guest 🎉'
-            }
-
-
-
-        </script>
-
+    </main>
+</body>
 </html>
