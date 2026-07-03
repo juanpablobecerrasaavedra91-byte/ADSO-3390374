@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10-Challenge-Tables</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #e040fb;
+            color: #fff;
+        }
+        tbody tr:nth-child(even) {
+            background: #16213e;
+        }
+        caption {
+            caption-side: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px;
+            color: #e040fb;
+        }
+    </style>
 </head>
-<body class="emmet">
+<body class="emmet bg-html">
     <a href="index.html" class="btn-home">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
             <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
@@ -18,8 +47,8 @@
             <h4>Table challenge</h4>
         </header>
         <section>
-            <table border="1">
-                <caption>Schedule</caption>
+            <table>
+                <caption>Weekly Schedule</caption>
                 <thead>
                     <tr>
                         <th>Hour</th>
