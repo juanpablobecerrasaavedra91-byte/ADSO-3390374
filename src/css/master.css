@@ -694,12 +694,28 @@ body.bg-html::before {
         repeating-linear-gradient(90deg, transparent 0px, transparent 30px, rgba(255,140,0,0.08) 30px, rgba(255,140,0,0.08) 60px);
 }
 
+/* ========== CSS PURPLE PATTERN ========== */
+body.bg-css::before {
+    background:
+        repeating-linear-gradient(45deg, #1a0a2e 0px, #1a0a2e 20px, #2d1a4e 20px, #2d1a4e 40px),
+        repeating-linear-gradient(-45deg, #1a0a2e 0px, #1a0a2e 20px, #3a206e 20px, #3a206e 40px),
+        repeating-conic-gradient(rgba(160,80,255,0.06) 0% 25%, transparent 25% 50%, rgba(200,130,255,0.06) 50% 75%, transparent 75% 100%);
+    background-size: 80px 80px, 80px 80px, 40px 40px;
+}
+
 /* ========== MENU MULTICOLOR PATTERN ========== */
 body.bg-menu::before {
     background:
-        repeating-linear-gradient(45deg, #1a0b2e 0px, #1a0b2e 30px, #2d1b4e 30px, #2d1b4e 60px),
-        repeating-linear-gradient(-45deg, transparent 0px, transparent 30px, rgba(255,77,148,0.06) 30px, rgba(255,77,148,0.06) 60px),
-        repeating-conic-gradient(rgba(255,179,102,0.04) 0% 25%, rgba(46,204,113,0.04) 25% 50%, rgba(52,152,219,0.04) 50% 75%, rgba(224,64,251,0.04) 75% 100%);
+        repeating-linear-gradient(45deg,
+            rgba(46,204,113,0.15) 0px, rgba(46,204,113,0.15) 40px,
+            rgba(255,255,0,0.15) 40px, rgba(255,255,0,0.15) 80px,
+            rgba(255,0,0,0.15) 80px, rgba(255,0,0,0.15) 120px,
+            rgba(52,152,219,0.15) 120px, rgba(52,152,219,0.15) 160px),
+        repeating-linear-gradient(-45deg,
+            rgba(255,77,148,0.1) 0px, rgba(255,77,148,0.1) 40px,
+            rgba(255,179,102,0.1) 40px, rgba(255,179,102,0.1) 80px,
+            rgba(168,85,247,0.1) 80px, rgba(168,85,247,0.1) 120px);
+    background-size: 160px 160px, 120px 120px;
 }
 
 /* ========== SCROLLBAR GLOBAL ========== */
