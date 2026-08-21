@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-Background</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        .props {
+            text-align: left;
+            margin: 1rem 0;
+        }
+        .props li {
+            color: #fff;
+            font-size: 0.9rem;
+            margin: 0.3rem 0;
+        }
+        .example {
+            background: rgba(255,255,255,0.08);
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: left;
+        }
+        .example h4 {
+            color: #ffb366;
+            margin-bottom: 0.5rem;
+        }
+        .color-box {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .image-box {
+            width: 100%;
+            height: 120px;
+            background-image: url('https://picsum.photos/400/120');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .repeat-box {
+            width: 150px;
+            height: 100px;
+            background-image: url('https://picsum.photos/50/50');
+            background-repeat: repeat;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .position-box {
+            width: 100%;
+            height: 100px;
+            background-image: url('https://picsum.photos/100/100');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        .size-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .size-item {
+            width: 150px;
+            height: 100px;
+            background-image: url('https://picsum.photos/150/100');
+            background-repeat: no-repeat;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            position: relative;
+        }
+        .size-item span {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+        }
+        .cover { background-size: cover; }
+        .contain { background-size: contain; }
+        .custom { background-size: 80px 60px; }
+    </style>
+</head>
+<body class="bg-css">
+    <a href="index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>14-Backgrounds</h1>
+            <ul class="props">
+                <li>• background-color</li>
+                <li>• background-image</li>
+                <li>• background-repeat</li>
+                <li>• background-position</li>
+                <li>• background-size</li>
+                <li>• background-attachment</li>
+            </ul>
+        </header>
+        <section>
+            <div class="example">
+                <h4>Background Color:</h4>
+                <div class="color-box" style="background-color: tomato;"></div>
+                <div class="color-box" style="background-color: rgb(52,152,219);"></div>
+                <div class="color-box" style="background: linear-gradient(to right, #f093fb, #f5576c);"></div>
+            </div>
+
+            <div class="example">
+                <h4>Background Image:</h4>
+                <div class="image-box"></div>
+            </div>
+
+            <div class="example">
+                <h4>Background Repeat:</h4>
+                <div class="repeat-box"></div>
+            </div>
+
+            <div class="example">
+                <h4>Background Position: right bottom</h4>
+                <div class="position-box"></div>
+            </div>
+
+            <div class="example">
+                <h4>Background Size:</h4>
+                <div class="size-box">
+                    <div class="size-item cover"><span>cover</span></div>
+                    <div class="size-item contain"><span>contain</span></div>
+                    <div class="size-item custom"><span>80px 60px</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
