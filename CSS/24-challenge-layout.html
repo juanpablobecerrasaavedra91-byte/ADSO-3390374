@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Web</title>
+    <style>
+        body {
+            background-color: #108a43;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px 20px 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-principal {
+            width: 200px;
+            height: 100px;
+            background-image: url('C:/Users/juanp/ADSO-3390374/CSS/Imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-size: 600px auto;
+            background-position: -200px 0px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 900px;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #064e26;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            border-bottom: 4px solid white;
+            flex: 1;
+            max-width: 150px;
+        }
+
+        .contenedor-galeria {
+            background-color: #064e26;
+            padding: 30px;
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 840px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
+
+        .tarjeta {
+            background-image: url('C:/Users/juanp/ADSO-3390374/CSS/Imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-size: 800px auto;
+            background-position: 0px 100%;
+            flex: 1;
+            height: 200px;
+            border: 2px solid white;
+            position: relative;
+        }
+
+        .tarjeta span {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cajita {
+            background-color: white;
+            width: 100%;
+            max-width: 840px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .texto {
+            flex: 1;
+            padding: 0 30px;
+            color: #333333;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .box-logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('C:/Users/juanp/ADSO-3390374/CSS/Imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-size: 600px auto;
+            background-position: 0px -100px;
+            flex-shrink: 0;
+        }
+
+        .box-lata {
+            width: 100px;
+            height: 140px;
+            background-image: url('C:/Users/juanp/ADSO-3390374/CSS/Imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-size: 600px auto;
+            background-position: -450px -50px;
+            flex-shrink: 0;
+        }
+
+        .footer-collage {
+            background-color: white;
+            width: 100%;
+            max-width: 840px;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .box-productos {
+            width: 400px;
+            height: 200px;
+            background-image: url('C:/Users/juanp/ADSO-3390374/CSS/Imgs/spriteweb.png');
+            background-repeat: no-repeat;
+            background-size: 700px auto;
+            background-position: -150px -300px; 
+        }
+
+        .menu-inferior {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            padding-bottom: 15px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+
+        .link-inferior {
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-principal"></div>
+
+    <div class="menu">
+        <a href="#" class="btn">INICIO</a>
+        <a href="#" class="btn">NOSOTROS</a>
+        <a href="#" class="btn">PORTAFOLIO</a>
+        <a href="#" class="btn">SERVICIOS</a>
+        <a href="#" class="btn">CONTACTO</a>
+    </div>
+
+    <div class="contenedor-galeria">
+        <div class="tarjeta"><span>Sprite 01</span></div>
+        <div class="tarjeta"><span>Sprite 02</span></div>
+        <div class="tarjeta"><span>Sprite 03</span></div>
+    </div>
+
+    <div class="cajita">
+        <div class="box-logo"></div>
+        <p class="texto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+        </p>
+        <div class="box-lata"></div>
+    </div>
+
+    <div class="cajita">
+        <div class="box-logo"></div>
+        <p class="texto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+        </p>
+        <div class="box-lata"></div>
+    </div>
+
+    <footer class="footer-collage">
+        <div class="box-productos"></div>
+        <div class="menu-inferior">
+            <a href="#" class="link-inferior">INICIO</a>
+            <a href="#" class="link-inferior">NOSOTROS</a>
+            <a href="#" class="link-inferior">PORTAFOLIO</a>
+            <a href="#" class="link-inferior">SERVICIOS</a>
+            <a href="#" class="link-inferior">CONTACTO</a>
+        </div>
+    </footer>
+
+</body>
+</html>

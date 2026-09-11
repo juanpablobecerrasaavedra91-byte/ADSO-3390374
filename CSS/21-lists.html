@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-lists</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section { text-align: left; display: grid; gap: 0.8rem; }
+        .box {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 1rem;
+            padding: 0.8rem 1rem;
+            color: #fff;
+        }
+        .l1 { list-style-type: square; list-style-position: inside; }
+        .l2 { list-style-type: upper-roman; list-style-position: inside; }
+        .l3 { list-style: none; padding: 0; }
+        .l3 li::before { content: "👉 "; }
+        .l3 li::marker { color: #ff4d94; }
+    </style>
+</head>
+<body class="bg-css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>21-Lists</h1>
+            <h4>list-style-type - position - custom</h4>
+        </header>
+        <section>
+            <div class="box">
+                <ul class="l1"><li>Manzana</li><li>Pera</li><li>Mango</li></ul>
+            </div>
+            <div class="box">
+                <ol class="l2"><li>HTML</li><li>CSS</li><li>JS</li></ol>
+            </div>
+            <div class="box">
+                <ul class="l3"><li>Personalizada 1</li><li>Personalizada 2</li></ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

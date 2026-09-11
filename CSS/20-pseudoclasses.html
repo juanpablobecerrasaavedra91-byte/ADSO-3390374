@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section { text-align: left; display: grid; gap: 0.8rem; }
+        .box {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 1rem;
+            padding: 0.8rem 1rem;
+            color: #fff;
+        }
+        .btn { display: inline-block; padding: 0.5rem 1rem; border-radius: 2rem;
+            background: #ffb366; color: #1a0b2e; font-weight: 700; text-decoration: none; }
+        .btn:hover { background: #ff4d94; color: #fff; }
+        .btn:active { transform: scale(0.95); }
+        ul.demo li { padding: 0.3rem 0.5rem; list-style: none; background: rgba(255,255,255,0.04); margin-bottom: 4px; border-radius: 0.5rem; }
+        ul.demo li:first-child { border-left: 4px solid #ff4d94; }
+        ul.demo li:last-child { border-left: 4px solid #2ecc71; }
+        ul.demo li:nth-child(2) { background: rgba(255,179,102,0.2); }
+        .field { width: 100%; padding: 0.5rem; border-radius: 0.6rem; border: 2px solid #fff3; outline: none; }
+        .field:focus { border-color: #ff4d94; background: #fff; }
+    </style>
+</head>
+<body class="bg-css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>20-Pseudoclasses</h1>
+            <h4>:hover - :active - :first-child - :focus</h4>
+        </header>
+        <section>
+            <div class="box">
+                <a href="#" class="btn">Pasa el mouse (:hover) / clic (:active)</a>
+            </div>
+            <div class="box">
+                <ul class="demo">
+                    <li>Primero (:first-child)</li>
+                    <li>Segundo (:nth-child 2)</li>
+                    <li>Último (:last-child)</li>
+                </ul>
+            </div>
+            <div class="box">
+                <input class="field" placeholder="Clic aquí (:focus)">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
