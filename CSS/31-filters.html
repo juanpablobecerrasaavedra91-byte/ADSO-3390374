@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>31-filters</title> 
+    <link rel="stylesheet" href="../src/css/master.css"> 
+    <style> 
+        section { 
+            gap: 1rem; 
+            margin: 2rem 0; 
+        } 
+        p { 
+            font-size: 2rem; 
+            padding: 1rem; 
+            text-align: center; 
+            
+            width: 400px; 
+            height: 400px; 
+            line-height: 56px; 
+            border: 2px solid red; 
+            border-radius: 1rem; 
+            background-size: cover; 
+            background-position: center; 
+        } 
+        #blur { 
+            background-image: url(imgs/angel.png); 
+            filter: blur(5px); 
+            transition: filter 1.5s; 
+        } 
+        #blur:hover { 
+            filter: blur(0px); 
+        } 
+
+        #grayscale { 
+            background-image: url(imgs/estat.png); 
+            filter: grayscale(100%); 
+            transition: filter 1.5s; 
+        }
+        #grayscale:hover { 
+            filter: grayscale(0%); 
+        }
+
+        #contrast { 
+            background-image: url(imgs/arzo.png); 
+            filter: contrast(50%); 
+            transition: filter 1.5s; 
+        }
+        #contrast:hover { 
+            filter: contrast(100%); 
+        }
+        #drop-shadow { 
+            background-image: url(imgs/cara.png); 
+            filter: drop-shadow(16px 16px 20px red); 
+            transition: filter 1.5s; 
+        }
+
+    </style> 
+</head> 
+<body class="Css"> 
+    <a href="index.html" class="btn-home"> 
+        <svg xmlns="http://w3.org" width="32" height="32" fill="#000000" viewBox="0 0 256 256"> 
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path> 
+        </svg> 
+    </a> 
+    <main> 
+        <header class="mainmenu"> 
+            <h1>31-filters</h1> 
+            <h4>: Property (filter) applying graphical transformations (e.g., blur(), grayscale(), contrast(), drop-shadow()) to elements before display. </h4> 
+        </header> 
+        <section> 
+            <p id="blur">blur</p> 
+            <p id="grayscale">grayscale</p> 
+            <p id="contrast">contrast</p> 
+            <p id="drop-shadow">drop-shadow</p> 
+        </section> 
+    </main>
+</body> 
+</html>
