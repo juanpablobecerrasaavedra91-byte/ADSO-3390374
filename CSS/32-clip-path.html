@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32-clip-path</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section{
+            div.clip{
+                background: url(imgs/pittsburgh.jpg) no repeat center/cover;
+                border-radius:14px;
+                corner-shape:squircle;
+                margin:0 auto;
+                height: 300px;
+                width: 300px;
+                transition: all 0.4s ease-in;
+
+                &.clip1{
+                        clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+                        &:hover{
+                            clip-path: polygon(100% 0%, 79% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+                        }
+                    }
+                &.clip2{
+                    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+                    &:hover{
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+                    }
+                }
+                }
+
+            }
+        
+    </style>
+</head>
+<body class="Css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">  >
+            <h1> Property that creates a clipping region defining which parts of an element are visible (using shapes like circle(), polygon(), or SVG paths)</h1>
+            <h4></h4>
+        </header>
+        <section>
+            <h4>Example 01:</h4>
+            <div class ="clip clip1"></div>
+            <h4>Example 02:</h4>
+            <div class ="clip clip2"></div>
+
+            
+        </section>
+</body>
+
+</html>

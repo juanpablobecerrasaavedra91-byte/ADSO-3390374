@@ -5,55 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>31-filters</title> 
     <link rel="stylesheet" href="../src/css/master.css"> 
-    <style> 
-        section { 
-            gap: 1rem; 
-            margin: 2rem 0; 
-        } 
-        p { 
-            font-size: 2rem; 
-            padding: 1rem; 
-            text-align: center; 
-            
-            width: 400px; 
-            height: 400px; 
-            line-height: 56px; 
-            border: 2px solid red; 
-            border-radius: 1rem; 
-            background-size: cover; 
-            background-position: center; 
-        } 
-        #blur { 
-            background-image: url(imgs/angel.png); 
-            filter: blur(5px); 
-            transition: filter 1.5s; 
-        } 
-        #blur:hover { 
-            filter: blur(0px); 
-        } 
+    <style>
+        section {
+            img.filter{
+                background: linear-gradient(45deg,crimson 50% , cyan 50%);
+                background-size : 3px;
+                outline: 2px solid #fff;
+                border-radius: 14px ;
+                corner-shape : squircle;
+                display:block;
+                margin: 1rem auto;
+                padding : 0.4rem;
+                transition: all 0.2s ease-in;
+                width: 140px;
 
-        #grayscale { 
-            background-image: url(imgs/estat.png); 
-            filter: grayscale(100%); 
-            transition: filter 1.5s; 
-        }
-        #grayscale:hover { 
-            filter: grayscale(0%); 
+                &.filter1{
+                    filter: grayscale(1);
+                }
+                &.filter2{
+                    filter: blur(6px);
+                }
+                &.filter3{
+                    filter: sepia(1);
+                }
+                &.filter4{
+                    filter: brightness(.4);
+                }
+                &.filter5{
+                    filter: invert();
+                }
+                &.filter6{
+                    filter: drop-shadow(0 0 12px #fff);
+                }
+                &.filter7{
+                    filter: hue-rotate(180deg);
+                }
+
+                &:hover{
+                    filter:none;
+                }
+
+            } 
         }
 
-        #contrast { 
-            background-image: url(imgs/arzo.png); 
-            filter: contrast(50%); 
-            transition: filter 1.5s; 
-        }
-        #contrast:hover { 
-            filter: contrast(100%); 
-        }
-        #drop-shadow { 
-            background-image: url(imgs/cara.png); 
-            filter: drop-shadow(16px 16px 20px red); 
-            transition: filter 1.5s; 
-        }
+
 
     </style> 
 </head> 
@@ -69,10 +64,20 @@
             <h4>: Property (filter) applying graphical transformations (e.g., blur(), grayscale(), contrast(), drop-shadow()) to elements before display. </h4> 
         </header> 
         <section> 
-            <p id="blur">blur</p> 
-            <p id="grayscale">grayscale</p> 
-            <p id="contrast">contrast</p> 
-            <p id="drop-shadow">drop-shadow</p> 
+            <h4>GrayScale</h4>
+            <img class="filter filter1" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>Blur</h4>
+            <img class="filter filter2" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>Sepia</h4>
+            <img class="filter filter3" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>Brightness</h4>
+            <img class="filter filter4" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>Invert</h4>
+            <img class="filter filter5" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>Drop Shadow</h4>
+            <img class="filter filter6" src="imgs/inosuke.png" alt="Inosuke">
+            <h4>HUE Rotate</h4>
+            <img class="filter filter7" src="imgs/inosuke.png" alt="Inosuke">
         </section> 
     </main>
 </body> 

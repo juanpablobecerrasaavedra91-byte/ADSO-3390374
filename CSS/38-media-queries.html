@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        *{
+            transition: all 0.5s ease;
+
+        }
+
+        body {
+            background-color:#013571;
+            color: #fff;
+            font-family: popins , sans-serif;
+            padding:1rem;
+
+        }
+
+        main{
+            border:10px solid  #fff;
+            padding: 1rem;
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        header{
+            figure.logo{
+                background: url(imgs/pepsi01.png) no-repeat center ;
+                display: block;
+                margin: 0 auto;
+                height: 354px;
+                width: 919;
+                padding: 0;
+            }
+            menu{
+                a:is(:link,:visited) {
+                    color: #013571;
+                    text-decoration: none;
+                    display:inline-block;
+                    border: 2px solid #fff;
+                    padding: 0.4rem 0.8rem;
+                    width:204px;
+                    background-color: #fff ;
+                    text-align: center;
+                    font-size:1.2rem;
+                    transition:all 0.5s ease;
+                    &:hover{
+                        transform:translateY(-8px) scale(1.02);
+                    }
+                }
+            }
+        }
+        section{
+            h2{
+                text-align: center;
+                font-style: 2.8rem;
+                font-weight: 400;
+                p{
+                    text-align: justify;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+
+        @media (max-widht:800px ) {
+            body{
+                main{
+                 width: 800px;
+
+                 header{
+                    figure.logo{
+                        height: 156px;
+                        width: 162px ;
+                        background: url(imgs/pepsi03png) no-repeat center;
+                    }
+                    menu{
+                        a:is(:link, :visited) {
+                            width: 124px;
+                            display:block;
+                            margin-bottom: 0.2rem;
+                        }
+                    }
+                 }
+                 section{
+                    h2:first-of-type { display:none;  }
+                    h2:last-of-type(2) { display :block ; }
+                    
+                 }
+                }
+            }
+        }
+                @media (max-widht: 1280px) {
+            body{
+                main{
+                 width: 800px;
+
+                 header{
+                    figure.logo{
+                        height: 370px;
+                        width: 349px;
+                        background: url(imgs/pepsi02.png) no-repeat center;
+                    }
+                    menu{
+                        a:is(:link, :visited) {
+                            width: 124px;
+                        }
+                    }
+                 }
+                 section{
+                    h2:nth-of-type(2) { display:none;  }
+                    h2:last-of-type(2) {
+                         font-size: 2rem;
+                         display:block;
+
+
+                    }
+                        
+                    
+                 }
+                }
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+    <header>
+        <figure class="logo"></figure>
+        <menu>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">services</a>
+            <a href="#">products</a>
+            <a href="#"></a>
+        </menu>
+
+    </header>
+    </main>
+</body>
+</html>
