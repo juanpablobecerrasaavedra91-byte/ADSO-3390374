@@ -3,45 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> challenge-responsive  </title>
+    <title> challenge-responsive </title>
     <style>
-
-        header{
-            background-color: burlywood;
+        header {
+            background-color: #ffffff0e;
             margin: 30px;
             padding: 18px;
-            border-radius:  60px;
+            border-radius: 60px;
             zoom: 0.7;
-            transition: 0.8s 0.3s ease;
+            transition: all 0.4s ease-in-out;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        header:hover {
+            zoom: 0.75;
+            background-color: #ffffffa0;
+            border: 2px solid #8a2be2;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), inset 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+        body {
+            background: url(imgs/fondoevas.jpg) ;
+            background-size:15in;
+            background-attachment: fixed;
+        }
+        #logo_eva {
+            background: url(imgs/logoeva.png) no-repeat center;
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+        }
+        .personajes {
+            text-align: center;
+        }
+        .Rey_tarjeta {
+            padding: 5px;
+            margin: 100px 20px 0 20px;
+            background: url(imgs/rey.jpg) no-repeat center;
+            background-size: cover;
+            width: 350px;
+            height: 350px;
+            zoom: 0.5;
+            text-align: center;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            font-size:2rem;
+        }
+        .Asuka {
+            padding: 5px;
+            margin: 100px 20px 0 20px;
+            background: url(imgs/Asuka.jpg) no-repeat center;
+            background-size: cover;
+            width: 350px;
+            height: 350px;
+            zoom: 0.5;
+            text-align: center;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            font-size:2rem;
+        }
+        .kaworu {
+            padding: 5px;
+            margin: 100px 20px 0 20px;
+            background: url(imgs/kaworu.jpg) no-repeat center;
+            background-size: cover;
+            width: 350px;
+            height: 350px;
+            zoom: 0.5;
+            text-align: center;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            font-size:2rem;
+        }
+        .Misato {
+            padding: 5px;
+            margin: 100px 20px 0 20px;
+            background: url(imgs/misato.jpg) no-repeat center;
+            background-size: cover;
+            width: 350px;
+            height: 350px;
+            zoom: 0.5;
+            text-align: center;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            font-size:2rem;
+        }
+        .descrpciones {
+            margin: 0 auto;
+        }
+        .tgt1 {
+            background: linear-gradient(45deg, black , white );
+            padding: 1rem;
+            margin: 200px 20px 0 250px;
+            border-color: blueviolet;
+            border-radius: 23px;
+            height: 300px;
+            width: 700px;
+            display: inline-block;
+            text-align: center;
+            filter:invert(14%);
             
-            &:hover{
-                zoom:0.9;
-                background: radial-gradient(circle , white 15% , black 15% , black 30% , white 30% , white 45% , black 45% , black 60% , white 60% , white 75% , black 75% , white 90%);
-
-
-
-
-                
-
-                
-                
-
+            .textito, .imgeva01 {
+                display: inline-block;
+                vertical-align: top;
+                margin: 65px 20px 0 -10px;
             }
-
+            .textito {
+                font-size: medium;
+                font-style: italic;
+                color:aliceblue;
+                text-align: center;
+                width: 340px;
+                margin:80px 20px 0 20px;
+            }
+            .imgeva01 {
+                background: url(imgs/eva01.jpg);
+                width: 300px;
+                height: 180px;
+                background-size: cover;
+            }
+        }
+        .tgt2 {
+            background: linear-gradient(45deg, black , white );
+            padding: 1rem;
+            margin: 200px 20px 0 250px;
+            border-color: blueviolet;
+            border-radius: 23px;
+            height: 300px;
+            width: 700px;
+            display: inline-block;
+            text-align: center;
+            filter:invert(14%);
             
-            
-        }
-        body{
-            background : url(imgs/fondoeva.jpg);
-        }
-        #logo_eva{
-            background: url(imgs/logoeva.png) no-repeat center ;
-            margin: 0 auto ;
-            width :400px;
-            height:400px;
+            .imgeva02 {
+                background:url(imgs/eva02.jpg);
+                width: 500px;
+                height: 400px;
+                transform: scale(0.4);
+                margin: -50px 20px 0 -130px;
+            }
+            .textito02 {
+                font-size: medium;
+                font-style: italic;
+                color:aliceblue;
+                text-align: center;
+                width: 340px;
+                margin:-250px 20px 0 310px;
+            }
         }
 
-       
+        @media (max-width: 768px) {
+            body {
+                background-size: cover;
+            }
+            #logo_eva {
+                width: 100%;
+                height: auto;
+            }
+            .Rey_tarjeta, .Asuka, .kaworu, .Misato {
+                margin: 20px auto;
+                display: inline-block;
+                width: 90%;
+            }
+            .tgt1, .tgt2 {
+                margin: 40px auto;
+                display: inline-block;
+                width: 90%;
+                height: auto;
+            }
+            .tgt1 .textito, .tgt1 .imgeva01 {
+                display: inline-block;
+                margin: 15px auto;
+                width: 100%;
+            }
+            .tgt2 .imgeva02 {
+                transform: scale(1);
+                margin: 15px auto;
+                width: 100%;
+                height: 180px;
+            }
+            .tgt2 .textito02 {
+                margin: 15px auto;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,18 +201,22 @@
         <div id="logo_eva"></div>
     </header>
     <main>
-        <section  class=" ">
-
+        <section class="personajes">
+            <div class="Rey_tarjeta"><span>Rey Ayanami</span></div>
+            <div class="Asuka"><span>Asuka</span></div>
+            <div class="kaworu"><span>Kaworu</span></div>
+            <div class="Misato"><span>Misato</span></div>
         </section>
-
-
-
+        <section class="descrpciones">
+            <div class="tgt1">
+                <div class="imgeva01"></div>
+                <div class="textito">El Evangelion Unidad-01 (EVA-01) es un gigante biomecánico protagonista de Neon Genesis Evangelion, pilotado por Shinji Ikari. A diferencia de las demás unidades, el EVA-01 no fue clonado de Adán, sino del segundo Ángel, Lilith. En su interior reside el alma de Yui Ikari, la madre de Shinji, un factor crucial que le permite manifestar una voluntad propia y protectora. </div>
+            </div>
+            <div class="tgt2">
+                <div class="imgeva02"></div>
+                <div class="textito02">El Evangelion Unidad-02 (EVA-02) es el primer modelo de producción en masa de la serie, construido por la rama de NERV en Alemania utilizando como base al primer Ángel, Adán. Pilotado principalmente por Asuka Langley Soryu, esta unidad alberga en su núcleo una parte del alma de Kyoko Zeppelin Soryu, la madre de la piloto, lo que genera su fuerte conexión </div>
+            </div>
         </section>
-        
-
-
     </main>
-
-    
 </body>
 </html>
